@@ -3,6 +3,14 @@ import tkinter as tk
 # e = 元件(父親元件)
 # e.排版()  pack(上下左右) grid(表格) absolute(絕對)
 
+def bmi():
+    # global e1, e2, result
+    h = float(e1.get())
+    w = float(e2.get())
+    ans = w / (h / 100) ** 2
+    # 第二時間
+    result["text"] = str(ans)
+
 window = tk.Tk()
 window.geometry("500x500+100+100")
 # 先創Frame
@@ -21,7 +29,7 @@ l2.pack(expand=True, fill=tk.BOTH, pady=10)
 e2 = tk.Entry(f1)
 e2.pack(expand=True, fill=tk.BOTH, pady=10)
 # 按紐: Button
-b1 = tk.Button(f1, text="計算")
+b1 = tk.Button(f1, text="計算", command=bmi)
 # tk.X
 b1.pack(expand=True, fill=tk.BOTH, pady=10)
 result = tk.Label(f1, text="按上面按鈕計算...")
