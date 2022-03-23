@@ -10,6 +10,10 @@
 pip install --trusted-host=pypi.org --trusted-host=files.pythonhosted.org --trusted-host=pypi.python.org <package name>
 ```
 
+``
+python.exe -m pip install jieba
+```
+
 ### Jupyter notebook
 
 Pycharm -> Terminal -> jupyter notebook
